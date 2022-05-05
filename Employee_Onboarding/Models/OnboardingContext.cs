@@ -19,9 +19,8 @@ namespace Employee_Onboarding.Models
         public virtual DbSet<Educationinfo> Educationinfos { get; set; }
         public virtual DbSet<Personalinfo> Personalinfos { get; set; }
         public virtual DbSet<Professionalinfo> Professionalinfos { get; set; }
-        public virtual DbSet<Register> Registers { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Userlogin> Userlogins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -183,59 +182,48 @@ namespace Employee_Onboarding.Models
                     .HasConstraintName("FK__Professio__Emplo__5441852A");
             });
 
-            modelBuilder.Entity<Register>(entity =>
-            {
-                entity.HasKey(e => e.Userid)
-                    .HasName("PK__register__CBA1B2571466A864");
-
-                entity.ToTable("register");
-
-                entity.Property(e => e.Userid).HasColumnName("userid");
-
-                entity.Property(e => e.Email)
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Roleid).HasColumnName("roleid");
-
-                entity.Property(e => e.UserPassword)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("user_password");
-
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.Registers)
-                    .HasForeignKey(d => d.Roleid)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__register__roleid__5DCAEF64");
-            });
-
-            modelBuilder.Entity<Role>(entity =>
-            {
-                entity.ToTable("roles");
-
-                entity.Property(e => e.Roleid).HasColumnName("roleid");
-
-                entity.Property(e => e.Roles)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("roles");
-            });
-
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("users");
 
-                entity.Property(e => e.Userid).HasColumnName("userid");
+                entity.Property(e => e.UserId).HasColumnName("userId");
 
-                entity.Property(e => e.Email)
+                entity.Property(e => e.EmailId)
                     .HasMaxLength(250)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("emailId");
+
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(250)
+                    .IsUnicode(false)
+                    .HasColumnName("firstName");
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(250)
+                    .IsUnicode(false)
+                    .HasColumnName("lastName");
 
                 entity.Property(e => e.UserPassword)
                     .HasMaxLength(250)
                     .IsUnicode(false)
-                    .HasColumnName("user_password");
+                    .HasColumnName("userPassword");
+            });
+
+            modelBuilder.Entity<Userlogin>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("userlogin");
+
+                entity.Property(e => e.EmailId)
+                    .HasMaxLength(250)
+                    .IsUnicode(false)
+                    .HasColumnName("emailId");
+
+                entity.Property(e => e.UserPassword)
+                    .HasMaxLength(250)
+                    .IsUnicode(false)
+                    .HasColumnName("userPassword");
             });
 
             OnModelCreatingPartial(modelBuilder);

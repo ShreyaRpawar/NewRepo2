@@ -1,5 +1,4 @@
 using Employee_Onboarding.Models;
-using Employee_Onboarding.Service;
 using Employee_Onboarding.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,8 +36,8 @@ namespace Employee_Onboarding
             services.AddScoped<IService<Educationinfo, int>,EducationalinfoService>();
             services.AddScoped<IService<Personalinfo, int>, PersonalinfoService>();
             services.AddScoped<IService<Professionalinfo, int>, ProfessionalinfoService>();
-            services.AddScoped<ILRService<Register, int>, RegisterService>();
-            services.AddScoped<ILRService<User, int>, LoginService>();
+            //services.AddScoped<ILRService<Register, int>, RegisterService>();
+            //services.AddScoped<ILRService<User, int>, LoginService>();
             services.AddControllersWithViews();
         }
 
@@ -60,6 +59,7 @@ namespace Employee_Onboarding
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseSession();
 
             app.UseAuthorization();
 

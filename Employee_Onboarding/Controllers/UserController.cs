@@ -1,90 +1,106 @@
 ﻿using Employee_Onboarding.Models;
-using Employee_Onboarding.Service;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
+using System.Linq;
+using System.Text;
+using XSystem.Security.Cryptography;
+using Microsoft.AspNetCore.Http;
+
 
 namespace Employee_Onboarding.Controllers
 {
-    public class UserController : Controller
+    public class userController : Controller
     {
-        private readonly ILRService<User, int> userserv;
-        private readonly ILRService<Register, int> regserv;
+       private OnboardingContext context = new OnboardingContext();
 
-        public UserController(ILRService<User, int> userserv, ILRService<Register, int> regserv)
-        {
-            this.userserv = userserv;
-            this.regserv = regserv;
-        }
         public IActionResult Index()
+        {
+            if (Session["UserId"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+
+        }
+
+        public ActionResult Register()
         {
             return View();
         }
-        public IActionResult Create()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(User user)
         {
-            var res = new User();
-            return View(res);
+            if (ModelState.IsValid)
+            {
+                var check = context.Users.FirstOrDefault(s => s.EmailId == s.EmailId);
+                if (check == null)
+                {
+                    user.UserPassword = GetMD5(user.UserPassword);
+                    context.Configuration.ValidateOnSaveEnabled = false;
+                    context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.error = "Email already exists";
+                    return View();
+                }
+            }
+            return View();
         }
 
-       // [HttpPost]
-        // public async Task<IActionResult> Index(User user)
-        //{
-        //    var res = userserv.GetAsync().Result.Where(x => x.EmailId == user.EmailId).FirstOrDefault();
-        //    if (res == null)
-        //    {
-        //        ViewBag.Message = "Wrong Credential";
-        //        return View(user);
-        //    }
-        //    if (user.Email == res.Email)
-        //    {
-        //        var decryptedPassword = await DecryptAsync(res.UserPassword);
-        //        if (user.UserPassword == decryptedPassword)
-        //        {
-        //            if (res.RoleId == 1)
-        //            {
-        //                return RedirectToAction("Index", "Student");
-        //            }
-        //            else
-        //            {
-        //                return RedirectToAction("Index", "Admin");
-        //            }
-        //        }
-        //        else
-        //        {
-        //            ViewBag.Message = "Wrong Password";
-        //            return View(user);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        ViewBag.Message = "Wrong EmailID";
-        //        return View(user);
-        //    }
-        //}
+        public ActionResult Login()
+        {
+            return View();
+        }
 
-        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Userlogin userlogin)
+        {
+            if (ModelState.IsValid)
+            {
+                var fpassword = GetMD5(userlogin.UserPassword);
+                var data = context.Users.Where(s => s.EmailId.Equals(userlogin.EmailId) && s.UserPassword.Equals(fpassword)).ToList();
+                if (data.Count() > 0)
+                {
+                    Session["FullName"] = data.FirstOrDefault().FirstName + " " + data.FirstOrDefault().LastName;
+                    Session["Email"] = data.FirstOrDefault().EmailId;
+                    Session["UserId"] = data.FirstOrDefault().UserId;
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.error = "Login failed";
+                    return RedirectToAction("Login");
+                }
+            }
+            return View();
+        }
 
-        //public IActionResult Create(User user)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Login");
+        }
 
-        //        user.SignIn = DateTime.Now;
-        //        var password = EncryptAsync(user.UserPassword).Result;
-        //        string str = user.Email.Substring(0, 4);
+        public static string GetMD5(string str)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] fromData = Encoding.UTF8.GetBytes(str);
+            byte[] targetData = md5.ComputeHash(fromData);
+            string byte2String = null;
 
-        //        string strnew = str;
-        //        user.Email = strnew;
-        //        user.UserPassword = password;
-        //        var res = regserv.CreateAsync(user).Result;
-        //        return RedirectToAction("Index", "Home");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.Message = "Wrong EmailID";
-        //        return View(user);
-        //    }
-        //}
+            for (int i = 0; i < targetData.Length; i++)
+            {
+                byte2String += targetData[i].ToString("x2");
+
+            }
+            return byte2String;
+        }
     }
 }
-

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Employee_Onboarding.Models.Educationinfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Educationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SscSchoolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SscPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SscPassingYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HscCollegeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HscPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HscPassingYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreeCollegeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreePercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreePassingYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.University)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighestQualificaion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Educationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SscSchoolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SscPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SscPassingYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HscCollegeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HscPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HscPassingYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreeCollegeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreePercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreePassingYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.University)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestQualificaion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

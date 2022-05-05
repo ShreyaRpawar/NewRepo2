@@ -1,0 +1,98 @@
+﻿@model Employee_Onboarding.Models.Educationinfo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Educationinfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Educationid" class="control-label"></label>
+                <input asp-for="Educationid" class="form-control" />
+                <span asp-validation-for="Educationid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <input asp-for="EmployeeId" class="form-control" />
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SscSchoolName" class="control-label"></label>
+                <input asp-for="SscSchoolName" class="form-control" />
+                <span asp-validation-for="SscSchoolName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SscPercentage" class="control-label"></label>
+                <input asp-for="SscPercentage" class="form-control" />
+                <span asp-validation-for="SscPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SscPassingYear" class="control-label"></label>
+                <input asp-for="SscPassingYear" class="form-control" />
+                <span asp-validation-for="SscPassingYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HscCollegeName" class="control-label"></label>
+                <input asp-for="HscCollegeName" class="form-control" />
+                <span asp-validation-for="HscCollegeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HscPercentage" class="control-label"></label>
+                <input asp-for="HscPercentage" class="form-control" />
+                <span asp-validation-for="HscPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HscPassingYear" class="control-label"></label>
+                <input asp-for="HscPassingYear" class="form-control" />
+                <span asp-validation-for="HscPassingYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DegreeCollegeName" class="control-label"></label>
+                <input asp-for="DegreeCollegeName" class="form-control" />
+                <span asp-validation-for="DegreeCollegeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Degree" class="control-label"></label>
+                <input asp-for="Degree" class="form-control" />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DegreePercentage" class="control-label"></label>
+                <input asp-for="DegreePercentage" class="form-control" />
+                <span asp-validation-for="DegreePercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DegreePassingYear" class="control-label"></label>
+                <input asp-for="DegreePassingYear" class="form-control" />
+                <span asp-validation-for="DegreePassingYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="University" class="control-label"></label>
+                <input asp-for="University" class="form-control" />
+                <span asp-validation-for="University" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HighestQualificaion" class="control-label"></label>
+                <input asp-for="HighestQualificaion" class="form-control" />
+                <span asp-validation-for="HighestQualificaion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

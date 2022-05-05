@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Employee_Onboarding.Models.Personalinfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fullname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalityAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contactno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emailid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passportfilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Signaturefilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adharcardfilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sscfilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hscfilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degreefilepath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resumefilepath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fullname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalityAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contactno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emailid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passportfilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Signaturefilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adharcardfilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sscfilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hscfilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degreefilepath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resumefilepath)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

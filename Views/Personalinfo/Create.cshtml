@@ -1,0 +1,103 @@
+﻿@model Employee_Onboarding.Models.Personalinfo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Personalinfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <input asp-for="EmployeeId" class="form-control" />
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fullname" class="control-label"></label>
+                <input asp-for="Fullname" class="form-control" />
+                <span asp-validation-for="Fullname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocalityAddress" class="control-label"></label>
+                <input asp-for="LocalityAddress" class="form-control" />
+                <span asp-validation-for="LocalityAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateN" class="control-label"></label>
+                <input asp-for="StateN" class="form-control" />
+                <span asp-validation-for="StateN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactno" class="control-label"></label>
+                <input asp-for="Contactno" class="form-control" />
+                <span asp-validation-for="Contactno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Emailid" class="control-label"></label>
+                <input asp-for="Emailid" class="form-control" />
+                <span asp-validation-for="Emailid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passportfilepath" class="control-label"></label>
+                <input asp-for="Passportfilepath" class="form-control" />
+                <span asp-validation-for="Passportfilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Signaturefilepath" class="control-label"></label>
+                <input asp-for="Signaturefilepath" class="form-control" />
+                <span asp-validation-for="Signaturefilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adharcardfilepath" class="control-label"></label>
+                <input asp-for="Adharcardfilepath" class="form-control" />
+                <span asp-validation-for="Adharcardfilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sscfilepath" class="control-label"></label>
+                <input asp-for="Sscfilepath" class="form-control" />
+                <span asp-validation-for="Sscfilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hscfilepath" class="control-label"></label>
+                <input asp-for="Hscfilepath" class="form-control" />
+                <span asp-validation-for="Hscfilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Degreefilepath" class="control-label"></label>
+                <input asp-for="Degreefilepath" class="form-control" />
+                <span asp-validation-for="Degreefilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Resumefilepath" class="control-label"></label>
+                <input asp-for="Resumefilepath" class="form-control" />
+                <span asp-validation-for="Resumefilepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

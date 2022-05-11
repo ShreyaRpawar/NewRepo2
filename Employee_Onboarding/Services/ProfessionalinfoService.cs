@@ -31,14 +31,20 @@ namespace Employee_Onboarding.Services
 
         }
 
-        async Task<IEnumerable<Professionalinfo>> IService<Professionalinfo, int>.GetAsync()
+    
+        async Task<Professionalinfo> IService<Professionalinfo, int>.GetAsync(int id)
         {
-            var result = await ctx.Professionalinfos.ToListAsync();
-            return result;
+            var res = await ctx.Professionalinfos.FindAsync(id);
+            return res;
         }
 
+        async Task<IEnumerable<Professionalinfo>> IService<Professionalinfo, int>.GetAsync()
+        {
+            var res = await ctx.Professionalinfos.ToListAsync();
+            return res;
+        }
 
-         async Task<Professionalinfo> IService<Professionalinfo, int>.GetByIdAsync(int id)
+        async Task<Professionalinfo> IService<Professionalinfo, int>.GetByIdAsync(int id)
         {
             var res = await ctx.Professionalinfos.FindAsync(id);
             return res;

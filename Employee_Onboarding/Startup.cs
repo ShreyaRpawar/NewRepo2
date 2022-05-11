@@ -34,7 +34,7 @@ namespace Employee_Onboarding
           
 
             services.AddScoped<IService<Educationinfo, int>,EducationalinfoService>();
-            services.AddScoped<IService<Personalinfo, int>, PersonalinfoService>();
+            services.AddScoped<IService<Personalinfo, int>, perserv>();
             services.AddScoped<IService<Professionalinfo, int>, ProfessionalinfoService>();
             //services.AddScoped<ILRService<Register, int>, RegisterService>();
             //services.AddScoped<ILRService<User, int>, LoginService>();
@@ -59,7 +59,7 @@ namespace Employee_Onboarding
 
             app.UseRouting();
             app.UseAuthentication();
-            app.UseSession();
+          //  app.UseSession();
 
             app.UseAuthorization();
 

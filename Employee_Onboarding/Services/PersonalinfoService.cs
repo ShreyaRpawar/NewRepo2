@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Employee_Onboarding.Services
 {
-    public class PersonalinfoService : IService<Personalinfo , int>
+    public class perserv : IService<Personalinfo,int>
     {
         private readonly OnboardingContext ctx;
 
-        public PersonalinfoService(OnboardingContext ctx)
+        public perserv(OnboardingContext ctx)
         {
             this.ctx = ctx; 
         }
@@ -30,13 +30,18 @@ namespace Employee_Onboarding.Services
             return res;
         }
 
-        async Task<IEnumerable<Personalinfo>> IService<Personalinfo, int>.GetAsync()
+        async Task<Personalinfo> IService<Personalinfo, int>.GetAsync(int id)
         {
-            var result = await ctx.Personalinfos.ToListAsync();
-            return result;
+         var res = await ctx.Personalinfos.FindAsync(id);
+            return res;
         }
 
-     
+        async Task<IEnumerable<Personalinfo>> IService<Personalinfo, int>.GetAsync()
+        {
+           var res = await ctx.Personalinfos.ToListAsync();
+            return res;
+        }
+
         async Task<Personalinfo> IService<Personalinfo, int>.GetByIdAsync(int id)
         {
            var res = await ctx.Personalinfos.FindAsync(id);

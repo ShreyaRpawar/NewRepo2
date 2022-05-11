@@ -47,6 +47,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc2lvbmFsaW5mb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/Profile/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/user/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdXNlclxVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Coditas/source/repos/Employee_Onboarding/Employee_Onboarding/Views/_ViewImports.cshtml]

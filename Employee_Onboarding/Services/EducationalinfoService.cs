@@ -31,6 +31,13 @@ namespace Employee_Onboarding.Services
             return res;
         }
 
+
+        async Task<Educationinfo> IService<Educationinfo, int>.GetAsync(int id)
+        {
+            var res = await ctx.Educationinfos.FindAsync(id);
+            return res;
+        }
+
         async Task<IEnumerable<Educationinfo>> IService<Educationinfo, int>.GetAsync()
         {
             var res = await ctx.Educationinfos.ToListAsync();

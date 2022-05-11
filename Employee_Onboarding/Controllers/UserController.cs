@@ -1,106 +1,91 @@
 ﻿using Employee_Onboarding.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Text;
 using XSystem.Security.Cryptography;
-using Microsoft.AspNetCore.Http;
-
 
 namespace Employee_Onboarding.Controllers
 {
     public class userController : Controller
     {
-       private OnboardingContext context = new OnboardingContext();
+        public object FormsAuthentication { get; private set; }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
-            if (Session["UserId"] != null)
+            return View();
+        }
+
+        public ActionResult User()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SaveRegisterDetails(User user)
+        {
+            if (ModelState.IsValid)
             {
-                return View();
+                using (var OnboardingContext = new OnboardingContext())
+                {
+                    User user1 = new User();
+                    user1.FirstName = user.FirstName;
+                    user1.LastName = user.LastName;
+                    user1.EmailId = user.EmailId;
+                    user1.UserPassword = user.UserPassword;
+
+                    OnboardingContext.Add(user1);
+                    OnboardingContext.SaveChanges();
+
+                }
+
+                ViewBag.Message = "User details wrong";
+                return View("User");
             }
             else
             {
-                return RedirectToAction("Login");
+                return View("User", user);
             }
-
         }
-
-        public ActionResult Register()
-        {
-            return View();
-        }
-
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Register(User user)
+        public ActionResult Login(Userlogin login)
         {
             if (ModelState.IsValid)
             {
-                var check = context.Users.FirstOrDefault(s => s.EmailId == s.EmailId);
-                if (check == null)
+                var isValidUser = IsValidUser(login);
+                if (isValidUser != null)
                 {
-                    user.UserPassword = GetMD5(user.UserPassword);
-                    context.Configuration.ValidateOnSaveEnabled = false;
-                    context.SaveChanges();
                     return RedirectToAction("Index");
                 }
                 else
                 {
-                    ViewBag.error = "Email already exists";
+                    ModelState.AddModelError("Failure", "Wrong Username and password combination !");
                     return View();
                 }
+
             }
-            return View();
-        }
-
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(Userlogin userlogin)
-        {
-            if (ModelState.IsValid)
+            else
             {
-                var fpassword = GetMD5(userlogin.UserPassword);
-                var data = context.Users.Where(s => s.EmailId.Equals(userlogin.EmailId) && s.UserPassword.Equals(fpassword)).ToList();
-                if (data.Count() > 0)
+                return View(login);
+            }
+
+        }
+
+        public User IsValidUser(Userlogin login)
+        {
+            using (var OnboardingContext = new OnboardingContext())
+            {
+                User user = OnboardingContext.Users.Where(query => query.EmailId.Equals(login.EmailId) && query.UserPassword.Equals(login.UserPassword)).SingleOrDefault();
+                if (user == null)
                 {
-                    Session["FullName"] = data.FirstOrDefault().FirstName + " " + data.FirstOrDefault().LastName;
-                    Session["Email"] = data.FirstOrDefault().EmailId;
-                    Session["UserId"] = data.FirstOrDefault().UserId;
-                    return RedirectToAction("Index");
+                    return null;
                 }
                 else
                 {
-                    ViewBag.error = "Login failed";
-                    return RedirectToAction("Login");
+                    return user;
                 }
             }
-            return View();
-        }
-
-        public ActionResult Logout()
-        {
-            Session.Clear();
-            return RedirectToAction("Login");
-        }
-
-        public static string GetMD5(string str)
-        {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] fromData = Encoding.UTF8.GetBytes(str);
-            byte[] targetData = md5.ComputeHash(fromData);
-            string byte2String = null;
-
-            for (int i = 0; i < targetData.Length; i++)
-            {
-                byte2String += targetData[i].ToString("x2");
-
-            }
-            return byte2String;
         }
     }
+
 }

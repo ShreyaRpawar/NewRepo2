@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Text;
-using XSystem.Security.Cryptography;
 
 namespace Employee_Onboarding.Controllers
 {

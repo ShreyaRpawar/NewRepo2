@@ -1,5 +1,6 @@
 ﻿using Employee_Onboarding.Models;
 using Employee_Onboarding.Services;
+using Employee_Onboarding.SessionExtension;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -29,8 +30,10 @@ namespace Employee_Onboarding.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Professionalinfo info)
         {
+            var professional = info;
+            HttpContext.Session.SetObject<Professionalinfo>("Professionalinfo", professional);
             var res = await proserv.CreateAsync(info);
-            return RedirectToAction("Upload", "FileUpload");
+            return RedirectToAction("FileUpload", "FileUpload");
         }
     }
 }

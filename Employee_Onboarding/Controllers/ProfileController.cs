@@ -73,6 +73,7 @@ namespace Employee_Onboarding.Controllers
             empdata.City = res.City;
             empdata.Contactno = res.Contactno;
             empdata.Emailid = res.Emailid;
+            empdata.Passportfilepath = res.Passportfilepath;
             var res1 = eduserv.GetAsync().Result.Where(i => i.EmployeeId == id).FirstOrDefault();
             empdata.Educationid = res1.Educationid;
             empdata.SscSchoolName = res1.SscSchoolName;

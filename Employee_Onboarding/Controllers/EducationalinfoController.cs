@@ -2,6 +2,8 @@
 using Employee_Onboarding.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Employee_Onboarding.SessionExtension;
+
 
 namespace Employee_Onboarding.Controllers
 {
@@ -29,6 +31,8 @@ namespace Employee_Onboarding.Controllers
         [HttpPost]
         public async Task< IActionResult> Create(Educationinfo info)
         {
+            var education = info;
+            HttpContext.Session.SetObject<Educationinfo>("Educationinfo", education);
             var res =await eduserv.CreateAsync(info);
             return RedirectToAction("Create", "Professionalinfo");
         }

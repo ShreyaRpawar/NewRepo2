@@ -10,6 +10,13 @@
         public string City { get; set; }
         public int Contactno { get; set; }
         public string Emailid { get; set; }
+        public string Passportfilepath { get; set; }
+        public string Signaturefilepath { get; set; }
+        public string Adharcardfilepath { get; set; }
+        public string Sscfilepath { get; set; }
+        public string Hscfilepath { get; set; }
+        public string Degreefilepath { get; set; }
+        public string Resumefilepath { get; set; }
         public int Educationid { get; set; }
         public string SscSchoolName { get; set; }
         public int? SscPercentage { get; set; }

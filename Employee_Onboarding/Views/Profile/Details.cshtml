@@ -1,174 +1,163 @@
-﻿@model Employee_Onboarding.Models.empData
+﻿
+
+@model Employee_Onboarding.Models.empData
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Full Details</h1>
+<td>                
+    <img src="@Model.Passportfilepath"                            
+    class="rounded-circle"                            
+    height="140" width="140"                            
+    asp-append-version="true" />             
+</td>
+<br />
+<h4>Personal Information</h4>
+<table class="table">    
+        <thead>        
+            <tr>            
+                <th>                Full Name           </th>            
+                <th>                Address           </th> 
+                <th>                Contact Number          </th> 
+                <th>                Email          </th>            
+                           
+                <th></th>        
+                </tr>    
+                </thead>    
 
-<div>
-    <h4>empData</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EmployeeId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EmployeeId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Fullname)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Fullname)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LocalityAddress)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LocalityAddress)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StateN)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StateN)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.City)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.City)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Contactno)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contactno)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Emailid)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Emailid)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Educationid)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Educationid)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SscSchoolName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SscSchoolName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SscPercentage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SscPercentage)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SscPassingYear)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SscPassingYear)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HscCollegeName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HscCollegeName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HscPercentage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HscPercentage)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HscPassingYear)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HscPassingYear)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DegreeCollegeName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DegreeCollegeName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Degree)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Degree)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DegreePercentage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DegreePercentage)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DegreePassingYear)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DegreePassingYear)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.University)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.University)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HighestQualificaion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HighestQualificaion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Professionalid)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Professionalid)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.WorkExperience)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.WorkExperience)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Company)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Company)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FieldOfExperience)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FieldOfExperience)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Experties)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Experties)
-        </dd>
-    </dl>
-</div>
-<div>
+                  <tbody>
+                 <tr>        
+                 <td>  @Html.DisplayFor(modelItem => Model.Fullname) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.LocalityAddress) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.Contactno)     </td>             
+                 <td>  @Html.DisplayFor(modelItem => Model.Emailid)  </td> 
+                 
+             </tr>  
+             <tr>        
+                 <td></td>            
+                 <td>City: @Html.DisplayFor(modelItem => Model.City) </td>            
+                 <td></td> 
+                 <td></td> 
+                 
+             </tr> 
+            
+             </tbody></table>
+
+             <h4>Educational Information</h4>
+<table class="table">    
+        <thead>        
+            <tr>            
+                <th>                EducationType            </th>            
+                <th>                BoardName           </th> 
+                <th>                Percentage          </th> 
+                <th>                PassingYear          </th>            
+                           
+                <th></th>        
+                </tr>    
+                </thead>    
+
+                  <tbody>
+                 <tr> 
+                 <td>  SSC</td>
+                 <td>  @Html.DisplayFor(modelItem => Model.SscSchoolName) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.SscPercentage) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.SscPassingYear)     </td>             
+             </tr> 
+
+             @if(Model.HscCollegeName!=null)
+        {
+             <tr>
+                 <td>HSC</td>
+                  <td>  @Html.DisplayFor(modelItem => Model.HscCollegeName) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.HscPercentage) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.HscPassingYear)     </td>             
+             </tr>
+        }
+
+       
+             @if(Model.DegreeCollegeName!=null)
+        {
+             <tr>
+                 <td>Degree</td>
+                  <td>  @Html.DisplayFor(modelItem => Model.DegreeCollegeName) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.DegreePercentage) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.DegreePassingYear)     </td>             
+             </tr>
+        }
+
+       
+        
+         </tbody></table>
+
+        <h4>Professional Information</h4>
+<table class="table">    
+        <thead>        
+            <tr>            
+                <th>                WorkExperience            </th>            
+                <th>                Company          </th> 
+                <th>                ProjectInfo          </th> 
+                     
+                </tr>    
+                </thead>  
+
+                 <tbody>
+                 <tr> 
+                
+                 <td>  @Html.DisplayFor(modelItem => Model.WorkExperience) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.Company) </td>            
+                 <td>  @Html.DisplayFor(modelItem => Model.Experties) </td>             
+            </tr> 
+        </tbody>
+       </table>
+
+               <h5>Documents Information</h5>
+               <body>
+                   <table>
+                       <tr>
+                           <th>     DOCUMENT          </th>
+
+                           <th>      RECORD              </th>
+                       </tr>
+                       <tr>
+                          <td>Resume</td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                        <tr>
+                          <td>Signaure</td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                         <tr>
+                          <td>AdharCard</td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                         <tr>
+                          <td>Ssc Result</td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                         <tr>
+                          <td>Hsc Result</td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                         <tr>
+                          <td>Degree Result </td>
+                         <td style="font-size:150%;font-weight:bold;color:green;">&#10004;</td>
+                       </tr>
+
+                   </table>
+               </body>
+
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>
 </div>
+
+
+
+        
+

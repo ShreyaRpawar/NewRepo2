@@ -39,6 +39,12 @@ namespace Employee_Onboarding
             //services.AddScoped<ILRService<Register, int>, RegisterService>();
             //services.AddScoped<ILRService<User, int>, LoginService>();
             services.AddControllersWithViews();
+
+            services.AddSession(session =>
+            {
+                session.IdleTimeout = TimeSpan.FromSeconds(200000);
+            });
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +65,7 @@ namespace Employee_Onboarding
 
             app.UseRouting();
             app.UseAuthentication();
-          //  app.UseSession();
+            app.UseSession();
 
             app.UseAuthorization();
 

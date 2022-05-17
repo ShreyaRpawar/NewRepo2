@@ -29,5 +29,7 @@ namespace Employee_Onboarding.Models
 
         public virtual ICollection<Educationinfo> Educationinfos { get; set; }
         public virtual ICollection<Professionalinfo> Professionalinfos { get; set; }
+
+      
     }
 }

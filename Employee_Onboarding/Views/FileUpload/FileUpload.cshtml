@@ -1,0 +1,120 @@
+﻿
+@model Employee_Onboarding.Models.documentsUpload;
+@{
+    ViewData["Title"] = "Upload Documents";
+}
+<h1>Upload Documents </h1>
+
+<form enctype="multipart/form-data" method="post">
+    <dl>
+        <dt>
+            <label asp-for="@Model.ProfilePicture"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.ProfilePicture" type="file">
+            <span asp-validation-for="@Model.ProfilePicture"></span>
+        </dd>
+         <div class="container">
+         @Model.ProfileUploadStatus
+     </div>
+    </dl>
+@*</form>*@
+@*<h2>Upload Resume</h2>*@
+@*<form enctype="multipart/form-data" method="post">*@
+    <dl>
+        <dt>
+            <label asp-for="@Model.Resume"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.Resume" type="file">
+            <span asp-validation-for="@Model.Resume"></span>
+        </dd>
+         <div class="container">
+         @Model.ResumeUploadStatus
+     </div>
+    </dl>
+
+    @*<h3>Upload Signature</h3>*@
+@*<form enctype="multipart/form-data" method="post">*@
+    <dl>
+        <dt>
+            <label asp-for="@Model.Sign"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.Sign" type="file">
+            <span asp-validation-for="@Model.Sign"></span>
+        </dd>
+         <div class="container">
+         @Model.signUploadStatus
+     </div>
+    </dl>
+
+    @*<h4>Upload AdharCard</h4>*@
+@*<form enctype="multipart/form-data" method="post">*@
+    <dl>
+        <dt>
+            <label asp-for="@Model.AdharCard"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.AdharCard" type="file">
+            <span asp-validation-for="@Model.AdharCard"></span>
+        </dd>
+         <div class="container">
+         @Model.adharUploadStatus
+     </div>
+    </dl>
+
+    @*<h5>Upload Ssc Result</h5>*@
+@*<form enctype="multipart/form-data" method="post">*@
+    <dl>
+        <dt>
+            <label asp-for="@Model.SscReport"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.SscReport" type="file">
+            <span asp-validation-for="@Model.SscReport"></span>
+        </dd>
+         <div class="container">
+         @Model.SscReportUploadStatus
+     </div>
+    </dl>
+
+    @*<h6>Upload Hsc Result</h6>*@
+@*<form enctype="multipart/form-data" method="post">*@
+    <dl>
+        <dt>
+            <label asp-for="@Model.HscReport"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.HscReport" type="file">
+            <span asp-validation-for="@Model.HscReport"></span>
+        </dd>
+         <div class="container">
+         @Model.HscUploadStatus
+     </div>
+    </dl>
+
+      @*<h7>Upload Degree Result</h7>*@
+     <dl>
+        <dt>
+            <label asp-for="@Model.DegreeReport"></label>
+        </dt>
+        <dd>
+            <input asp-for="@Model.DegreeReport" type="file">
+            <span asp-validation-for="@Model.DegreeReport"></span>
+        </dd>
+         <div class="container">
+         @Model.DegreeReportUploadStatus
+     </div>
+    </dl>
+
+    
+     <div class="form-group">
+                <input type="submit"  value=" SAVE " class="btn btn-primary" />
+            </div>
+            <div>
+    <a asp-action="Create">Back to List</a>
+</div>
+</form>
+
+

@@ -13,11 +13,15 @@
     <thead>
         <tr>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Professionalid)
+                </p>
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmployeeId)
-            </th>
+      @*      <th>
+                 <p hidden>
+                @html.displaynamefor(model => model.employeeid)
+                </p>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.WorkExperience)
             </th>
@@ -36,12 +40,16 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+           @* <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Professionalid)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.EmployeeId)
-            </td>
+                </p>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.WorkExperience)
             </td>

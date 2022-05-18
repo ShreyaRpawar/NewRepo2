@@ -41,29 +41,29 @@ namespace Employee_Onboarding.Controllers
         {
             IFormFile file = data.ProfilePicture;
             IFormFile Resume = data.Resume;
-            IFormFile Sign = data.Sign;
-            IFormFile AdharCard = data.AdharCard;
-            IFormFile Sscfile = data.SscReport;
-            IFormFile Hscfile = data.HscReport;
-            IFormFile Degree = data.DegreeReport;
+            //IFormFile Sign = data.Sign;
+            //IFormFile AdharCard = data.AdharCard;
+            //IFormFile Sscfile = data.SscReport;
+            //IFormFile Hscfile = data.HscReport;
+            //IFormFile Degree = data.DegreeReport;
 
 
             var ProfileFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
             var ResumeFileName = ContentDispositionHeaderValue.Parse(Resume.ContentDisposition).FileName.Trim('"');
-            var signfilename = ContentDispositionHeaderValue.Parse(Sign.ContentDisposition).FileName.Trim('"');
-            var adharfilename = ContentDispositionHeaderValue.Parse(AdharCard.ContentDisposition).FileName.Trim('"');
-            var Sscfilename = ContentDispositionHeaderValue.Parse(Sscfile.ContentDisposition).FileName.Trim('"');
-            var Hscfilename = ContentDispositionHeaderValue.Parse(Hscfile.ContentDisposition).FileName.Trim('"');
-            var Degreefilename = ContentDispositionHeaderValue.Parse(Degree.ContentDisposition).FileName.Trim('"');
+            //var signfilename = ContentDispositionHeaderValue.Parse(Sign.ContentDisposition).FileName.Trim('"');
+            //var adharfilename = ContentDispositionHeaderValue.Parse(AdharCard.ContentDisposition).FileName.Trim('"');
+            //var Sscfilename = ContentDispositionHeaderValue.Parse(Sscfile.ContentDisposition).FileName.Trim('"');
+            //var Hscfilename = ContentDispositionHeaderValue.Parse(Hscfile.ContentDisposition).FileName.Trim('"');
+            //var Degreefilename = ContentDispositionHeaderValue.Parse(Degree.ContentDisposition).FileName.Trim('"');
 
 
             FileInfo fileInfo = new FileInfo(ProfileFileName);
             FileInfo fileInfo1 = new FileInfo(ResumeFileName);
-            FileInfo fileInfo2 = new FileInfo(signfilename);
-            FileInfo fileInfo3 = new FileInfo(adharfilename);
-            FileInfo fileInfo4 = new FileInfo(Sscfilename);
-            FileInfo fileInfo5 = new FileInfo(Hscfilename);
-            FileInfo fileInfo6 = new FileInfo(Degreefilename);
+            //FileInfo fileInfo2 = new FileInfo(signfilename);
+            //FileInfo fileInfo3 = new FileInfo(adharfilename);
+            //FileInfo fileInfo4 = new FileInfo(Sscfilename);
+            //FileInfo fileInfo5 = new FileInfo(Hscfilename);
+            //FileInfo fileInfo6 = new FileInfo(Degreefilename);
 
 
             if (fileInfo.Extension == ".jpg" || fileInfo.Extension == ".png")
@@ -99,92 +99,92 @@ namespace Employee_Onboarding.Controllers
                 data.ResumeUploadStatus = "Failed to Upload Resume......";
                 return View(data);
             }
-            if (fileInfo2.Extension == ".pdf")
-            {
-                var finalPathSign = Path.Combine(hostEnvironment.WebRootPath, "PDF", signfilename);
-                var temp = HttpContext.Session.GetString("signpath").ToString();
-                using (var fs = new FileStream(finalPathSign, FileMode.OpenOrCreate))
-                {
-                    await Sign.CopyToAsync(fs);
-                }
-                data.signfilename = @$"~/PDF/{Sign.FileName}";
-                HttpContext.Session.SetString("SignPath", data.signfilename);
-                data.signUploadStatus = "Sign Uploaded successfully";
-            }
-            else
-            {
-                data.signUploadStatus = "File Upload failed";
-                return View(data);
-            }
-            if (fileInfo3.Extension == ".pdf")
-            {
-                var finalPathAdhar = Path.Combine(hostEnvironment.WebRootPath, "PDF", adharfilename);
-                var temp = HttpContext.Session.GetString("adharpath").ToString();
-                using (var fs = new FileStream(finalPathAdhar, FileMode.OpenOrCreate))
-                {
-                    await AdharCard.CopyToAsync(fs);
-                }
-                data.adharfilename = @$"~/PDF/{AdharCard.FileName}";
-                HttpContext.Session.SetString("Adharcard", data.adharfilename);
-                data.adharUploadStatus = "Sign Uploaded successfully";
-            }
-            else
-            {
-                data.adharUploadStatus = "File Upload failed";
-                return View(data);
-            }
+            //if (fileInfo2.Extension == ".pdf")
+            //{
+            //    var finalPathSign = Path.Combine(hostEnvironment.WebRootPath, "PDF", signfilename);
+            //    var temp = HttpContext.Session.GetString("signpath").ToString();
+            //    using (var fs = new FileStream(finalPathSign, FileMode.OpenOrCreate))
+            //    {
+            //        await Sign.CopyToAsync(fs);
+            //    }
+            //    data.signfilename = @$"~/PDF/{Sign.FileName}";
+            //    HttpContext.Session.SetString("SignPath", data.signfilename);
+            //    data.signUploadStatus = "Sign Uploaded successfully";
+            //}
+            //else
+            //{
+            //    data.signUploadStatus = "File Upload failed";
+            //    return View(data);
+            //}
+            //if (fileInfo3.Extension == ".pdf")
+            //{
+            //    var finalPathAdhar = Path.Combine(hostEnvironment.WebRootPath, "PDF", adharfilename);
+            //    var temp = HttpContext.Session.GetString("adharpath").ToString();
+            //    using (var fs = new FileStream(finalPathAdhar, FileMode.OpenOrCreate))
+            //    {
+            //        await AdharCard.CopyToAsync(fs);
+            //    }
+            //    data.adharfilename = @$"~/PDF/{AdharCard.FileName}";
+            //    HttpContext.Session.SetString("Adharcard", data.adharfilename);
+            //    data.adharUploadStatus = "Sign Uploaded successfully";
+            //}
+            //else
+            //{
+            //    data.adharUploadStatus = "File Upload failed";
+            //    return View(data);
+            //}
 
-            if (fileInfo4.Extension == ".pdf")
-            {
-                var finalPathSsc = Path.Combine(hostEnvironment.WebRootPath, "PDF", Sscfilename);
-                var temp = HttpContext.Session.GetString("Sscpath").ToString();
-                using (var fs = new FileStream(finalPathSsc, FileMode.OpenOrCreate))
-                {
-                    await Sscfile.CopyToAsync(fs);
-                }
-                data.Sscfilename = @$"~/PDF/{Sscfile.FileName}";
-                HttpContext.Session.SetString("Sscfile", data.Sscfilename);
-                data.SscReportUploadStatus = "Ssc report Uploaded successfully";
-            }
-            else
-            {
-                data.SscReportUploadStatus = "Ssc Report Upload failed";
-                return View(data);
-            }
-            if (fileInfo5.Extension == ".pdf")
-            {
-                var finalPathHsc = Path.Combine(hostEnvironment.WebRootPath, "PDF", Hscfilename);
-                var temp = HttpContext.Session.GetString("Hscpath").ToString();
-                using (var fs = new FileStream(finalPathHsc, FileMode.OpenOrCreate))
-                {
-                    await Hscfile.CopyToAsync(fs);
-                }
-                data.Hscfilename = @$"~/PDF/{Hscfile.FileName}";
-                HttpContext.Session.SetString("Hscfile", data.Hscfilename);
-                data.HscUploadStatus = "Hsc report Uploaded successfully";
-            }
-            else
-            {
-                data.HscUploadStatus = "Hsc Report Upload failed";
-                return View(data);
-            }
-            if (fileInfo6.Extension == ".pdf")
-            {
-                var finalPathDegree = Path.Combine(hostEnvironment.WebRootPath, "PDF", Degreefilename);
-                var temp = HttpContext.Session.GetString("Degreepath").ToString();
-                using (var fs = new FileStream(finalPathDegree, FileMode.OpenOrCreate))
-                {
-                    await Degree.CopyToAsync(fs);
-                }
-                data.Degreefilename = @$"~/PDF/{Degree.FileName}";
-                HttpContext.Session.SetString("Degee", data.Degreefilename);
-                data.DegreeReportUploadStatus = "Degree report Uploaded successfully";
-            }
-            else
-            {
-                data.DegreeReportUploadStatus = "Degree Report Upload failed";
-                return View(data);
-            }
+            //if (fileInfo4.Extension == ".pdf")
+            //{
+            //    var finalPathSsc = Path.Combine(hostEnvironment.WebRootPath, "PDF", Sscfilename);
+            //    var temp = HttpContext.Session.GetString("Sscpath").ToString();
+            //    using (var fs = new FileStream(finalPathSsc, FileMode.OpenOrCreate))
+            //    {
+            //        await Sscfile.CopyToAsync(fs);
+            //    }
+            //    data.Sscfilename = @$"~/PDF/{Sscfile.FileName}";
+            //    HttpContext.Session.SetString("Sscfile", data.Sscfilename);
+            //    data.SscReportUploadStatus = "Ssc report Uploaded successfully";
+            //}
+            //else
+            //{
+            //    data.SscReportUploadStatus = "Ssc Report Upload failed";
+            //    return View(data);
+            //}
+            //if (fileInfo5.Extension == ".pdf")
+            //{
+            //    var finalPathHsc = Path.Combine(hostEnvironment.WebRootPath, "PDF", Hscfilename);
+            //    var temp = HttpContext.Session.GetString("Hscpath").ToString();
+            //    using (var fs = new FileStream(finalPathHsc, FileMode.OpenOrCreate))
+            //    {
+            //        await Hscfile.CopyToAsync(fs);
+            //    }
+            //    data.Hscfilename = @$"~/PDF/{Hscfile.FileName}";
+            //    HttpContext.Session.SetString("Hscfile", data.Hscfilename);
+            //    data.HscUploadStatus = "Hsc report Uploaded successfully";
+            //}
+            //else
+            //{
+            //    data.HscUploadStatus = "Hsc Report Upload failed";
+            //    return View(data);
+            //}
+            //if (fileInfo6.Extension == ".pdf")
+            //{
+            //    var finalPathDegree = Path.Combine(hostEnvironment.WebRootPath, "PDF", Degreefilename);
+            //    var temp = HttpContext.Session.GetString("Degreepath").ToString();
+            //    using (var fs = new FileStream(finalPathDegree, FileMode.OpenOrCreate))
+            //    {
+            //        await Degree.CopyToAsync(fs);
+            //    }
+            //    data.Degreefilename = @$"~/PDF/{Degree.FileName}";
+            //    HttpContext.Session.SetString("Degee", data.Degreefilename);
+            //    data.DegreeReportUploadStatus = "Degree report Uploaded successfully";
+            //}
+            //else
+            //{
+            //    data.DegreeReportUploadStatus = "Degree Report Upload failed";
+            //    return View(data);
+            //}
 
 
             return RedirectToAction("UploadData");
@@ -200,7 +200,7 @@ namespace Employee_Onboarding.Controllers
             Personalinfo.Hscfilepath = Convert.ToString(HttpContext.Session.GetString("HscPath"));
             Personalinfo.Degreefilepath = Convert.ToString(HttpContext.Session.GetString("DegreePath"));
 
-            var r = Personalinfo;
+            //var r = Personalinfo;
             var result = perserv.CreateAsync(Personalinfo).Result;
             var education = HttpContext.Session.GetObject<Educationinfo>("Educationinfo");
             education.EmployeeId = result.EmployeeId;
@@ -209,7 +209,12 @@ namespace Employee_Onboarding.Controllers
 
             professional.EmployeeId = result.EmployeeId;
             var temp = proserv.CreateAsync(professional).Result;
-          
+
+
+            var personalInfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
+
+
+
             return RedirectToAction("Index", "Home");
         }
     }

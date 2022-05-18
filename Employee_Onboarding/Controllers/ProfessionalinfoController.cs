@@ -8,11 +8,17 @@ namespace Employee_Onboarding.Controllers
 {
     public class ProfessionalinfoController : Controller
     {
-        private readonly IService<Professionalinfo , int >proserv;
+        private readonly IService<Professionalinfo, int> proserv;
+        private readonly IService<Personalinfo, int> perservice;
+        private readonly IService<Educationinfo, int> eduserv;
 
-        public ProfessionalinfoController(IService<Professionalinfo, int> service)
+
+
+        public ProfessionalinfoController(IService<Professionalinfo, int> service, IService<Personalinfo, int> perservice, IService<Educationinfo, int> eduserv)
         {
             proserv = service;
+            this.perservice = perservice;
+            this.eduserv = eduserv;
         }
 
         public IActionResult Index()
@@ -31,7 +37,12 @@ namespace Employee_Onboarding.Controllers
         public async Task<IActionResult> Create(Professionalinfo info)
         {
             var professional = info;
+
+            var educationInfo = HttpContext.Session.GetObject<Educationinfo>("Educationinfo");
+            var personalInfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
+
             HttpContext.Session.SetObject<Professionalinfo>("Professionalinfo", professional);
+
             var res = await proserv.CreateAsync(info);
             return RedirectToAction("FileUpload", "FileUpload");
         }

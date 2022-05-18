@@ -1,0 +1,296 @@
+﻿++Solution 'Employee_Onboarding' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:Employee_Onboarding.sln
+++Solution Items
+i:{00000000-0000-0000-0000-000000000000}:Solution Items
+++.editorconfig
+i:{d71aed16-00b0-4264-9dd9-057a4fbf7358}:C:\Users\Coditas\source\repos\Employee_Onboarding\.editorconfig
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\.editorconfig
+++Employee_Onboarding
+i:{00000000-0000-0000-0000-000000000000}:Employee_Onboarding
+++Connected Services 
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1312
+++Dependencies
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1311
+++Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:analyzers
+++Frameworks
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:frameworks
+++Packages
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:packages
+++EntityFramework (6.4.4)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1356
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.4)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1329
+++Microsoft.EntityFrameworkCore (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1324
+++Microsoft.EntityFrameworkCore.Cosmos (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1354
+++Microsoft.EntityFrameworkCore.Design (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1326
+++Microsoft.EntityFrameworkCore.Relational (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1330
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1355
+++Microsoft.EntityFrameworkCore.Tools (6.0.5)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1331
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (6.0.4)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1332
+++Swashbuckle.AspNetCore (6.3.0)
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1327
+++Properties
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\properties\
+++wwwroot
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\
+++css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\css\
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\
+++images
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\images\
+++SquarePic_20220514_22505460.jpg
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\images\squarepic_20220514_22505460.jpg
+++Webp.net-compress-image.jpg
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\images\webp.net-compress-image.jpg
+++js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\js\
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\
+++NewFolder
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\newfolder\
+++PDF
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\pdf\
+++61_Dipti Gaikwad_Wsn prelims.pdf
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\pdf\61_dipti gaikwad_wsn prelims.pdf
+++Shreya's Resume.pdf
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\pdf\shreya's resume.pdf
+++favicon.ico
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\favicon.ico
+++Controllers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\
+++EducationalinfoController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\educationalinfocontroller.cs
+++FileUploadController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\fileuploadcontroller.cs
+++HomeController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\homecontroller.cs
+++PersonalinfoController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\personalinfocontroller.cs
+++ProfessionalinfoController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\professionalinfocontroller.cs
+++ProfileController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\profilecontroller.cs
+++userController.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\controllers\usercontroller.cs
+++Models
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\
+++Database.tt
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\database.tt
+++documentsUpload.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\documentsupload.cs
+++Educationinfo.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\educationinfo.cs
+++empData.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\empdata.cs
+++ErrorViewModel.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\errorviewmodel.cs
+++OnboardingContext.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\onboardingcontext.cs
+++Personalinfo.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\personalinfo.cs
+++Professionalinfo.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\professionalinfo.cs
+++profile.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\profile.cs
+++User.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\user.cs
+++Userlogin.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\userlogin.cs
+++Services
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\services\
+++EducationalinfoService.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\services\educationalinfoservice.cs
+++IService.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\services\iservice.cs
+++PersonalinfoService.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\services\personalinfoservice.cs
+++ProfessionalinfoService.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\services\professionalinfoservice.cs
+++SessionExtension
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\sessionextension\
+++SessionExtension.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\sessionextension\sessionextension.cs
+++Views
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\
+++Educationalinfo
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\educationalinfo\
+++FileUpload
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\fileupload\
+++FileUpload.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\fileupload\fileupload.cshtml
+++Home
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\home\
+++Personalinfo
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\personalinfo\
+++Professionalinfo
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\professionalinfo\
+++Profile
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\profile\
+++Details.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\profile\details.cshtml
+++Index.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\profile\index.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\educationalinfo\index.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\home\index.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\personalinfo\index.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\professionalinfo\index.cshtml
+++Shared
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\shared\
+++_Layout.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\shared\_validationscriptspartial.cshtml
+++Error.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\shared\error.cshtml
+++user
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\user\
+++User.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\user\user.cshtml
+++_ViewImports.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\_viewstart.cshtml
+++appsettings.json
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\appsettings.json
+++Program.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\program.cs
+++Startup.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\startup.cs
+++No service dependencies discovered
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:>1313
+++MessagePackAnalyzer
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\.nuget\packages\messagepackanalyzer\2.1.152\analyzers\dotnet\messagepackanalyzer.dll
+++Microsoft.AspNetCore.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.5\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.4\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.4\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\microsoft.netcore.app
+++launchSettings.json
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\properties\launchsettings.json
+++site.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\css\site.css
+++site.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\js\site.js
+++bootstrap
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\
+++jquery
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\
+++jquery-validation
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation-unobtrusive\
+++Database.cs
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\models\database.cs
+++Create.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\educationalinfo\create.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\personalinfo\create.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\professionalinfo\create.cshtml
+++Privacy.cshtml
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\views\home\privacy.cshtml
+++appsettings.Development.json
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\appsettings.development.json
+++dist
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\dist\
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\license.txt
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap-grid.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-reboot.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap.bundle.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.js.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap-grid.min.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-reboot.min.css.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap.bundle.js.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.min.js.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.bundle.min.js.map
+i:{75961390-acc4-49f0-a9dd-5bca3866854a}:c:\users\coditas\source\repos\employee_onboarding\employee_onboarding\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map

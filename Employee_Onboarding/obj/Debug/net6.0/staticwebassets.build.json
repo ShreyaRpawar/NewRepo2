@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AjDdm7yuo6EyJtnCGQYFyusfoGyw782v1czlUhVT7bg=",
+  "Hash": "EdqttF85/ZvAXKsIbNewDgeBheet2PKO5nViEX+pPig=",
   "Source": "Employee_Onboarding",
   "BasePath": "_content/Employee_Onboarding",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\images\\SquarePic_20220514_22505460.jpg",
+      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\images\\mom (1)_page-0001.jpg",
       "SourceId": "Employee_Onboarding",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
       "BasePath": "_content/Employee_Onboarding",
-      "RelativePath": "images/SquarePic_20220514_22505460.jpg",
+      "RelativePath": "images/mom (1)_page-0001.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,24 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\SquarePic_20220514_22505460.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\images\\Webp.net-compress-image.jpg",
-      "SourceId": "Employee_Onboarding",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
-      "BasePath": "_content/Employee_Onboarding",
-      "RelativePath": "images/Webp.net-compress-image.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Webp.net-compress-image.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\mom (1)_page-0001.jpg"
     },
     {
       "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\js\\site.js",
@@ -661,40 +644,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\PDF\\61_Dipti Gaikwad_Wsn prelims.pdf",
-      "SourceId": "Employee_Onboarding",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
-      "BasePath": "_content/Employee_Onboarding",
-      "RelativePath": "PDF/61_Dipti Gaikwad_Wsn prelims.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\PDF\\61_Dipti Gaikwad_Wsn prelims.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\PDF\\Shreya's Resume.pdf",
-      "SourceId": "Employee_Onboarding",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
-      "BasePath": "_content/Employee_Onboarding",
-      "RelativePath": "PDF/Shreya's Resume.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\PDF\\Shreya's Resume.pdf"
     }
   ]
 }

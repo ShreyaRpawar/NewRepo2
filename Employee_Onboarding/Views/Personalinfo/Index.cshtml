@@ -12,9 +12,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+          @*  <th>
                 @Html.DisplayNameFor(model => model.EmployeeId)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Fullname)
             </th>
@@ -36,36 +36,50 @@
             <th>
                 @Html.DisplayNameFor(model => model.Emailid)
             </th>
-            <th>
+         @*   <th>
+                <p hidden>
                 @Html.DisplayNameFor(model => model.Passportfilepath)
+                </p>
             </th>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Signaturefilepath)
+                </p>
             </th>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Adharcardfilepath)
+                </p>
             </th>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Sscfilepath)
+                </p>
             </th>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Hscfilepath)
+                </p>
             </th>
             <th>
+                 <p hidden>
                 @Html.DisplayNameFor(model => model.Degreefilepath)
+                </p>
             </th>
             <th>
+                  <p hidden>
                 @Html.DisplayNameFor(model => model.Resumefilepath)
-            </th>
+                  </p>
+            </th>*@
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+          @*  <td>
                 @Html.DisplayFor(modelItem => item.EmployeeId)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Fullname)
             </td>
@@ -87,27 +101,41 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Emailid)
             </td>
-            <td>
+           @* <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Passportfilepath)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Signaturefilepath)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Adharcardfilepath)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Sscfilepath)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Hscfilepath)
+                </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Degreefilepath)
+                 </p>
             </td>
             <td>
+                 <p hidden>
                 @Html.DisplayFor(modelItem => item.Resumefilepath)
-            </td>
+                 </p>
+            </td>*@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |

@@ -14,9 +14,9 @@ namespace Employee_Onboarding.Controllers
 
         public ProfileController(IService<Personalinfo, int> perserv, IService<Educationinfo, int> eduserv, IService<Professionalinfo, int> proserv)
         {
-            this.perserv= perserv;
-            this.eduserv= eduserv;
-            this.proserv= proserv;
+            this.perserv = perserv;
+            this.eduserv = eduserv;
+            this.proserv = proserv;
         }
         public IActionResult Index()
         {
@@ -77,7 +77,7 @@ namespace Employee_Onboarding.Controllers
             var res1 = eduserv.GetAsync().Result.Where(i => i.EmployeeId == id).FirstOrDefault();
             empdata.Educationid = res1.Educationid;
             empdata.SscSchoolName = res1.SscSchoolName;
-            empdata.SscPercentage= res1.SscPercentage;
+            empdata.SscPercentage = res1.SscPercentage;
             empdata.SscPassingYear = res1.SscPassingYear;
             empdata.HscCollegeName = res1.HscCollegeName;
             empdata.HscPercentage = res1.HscPercentage;

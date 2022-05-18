@@ -25,7 +25,7 @@ namespace Employee_Onboarding.Services
         async Task<Educationinfo> IService<Educationinfo, int>.DeleteAsync(int id)
         {
             var res = await ctx.Educationinfos.FindAsync(id);
-            if (res == null) return null;
+             if (res == null) return null;
             ctx.Educationinfos.Remove(res);
             await ctx.SaveChangesAsync();
             return res;
@@ -51,10 +51,10 @@ namespace Employee_Onboarding.Services
             return res;
         }
 
-        async Task<Educationinfo> IService<Educationinfo, int>.UpdateAsync(int id, Educationinfo entity)
+        async Task<Educationinfo>IService<Educationinfo, int>.UpdateAsync(int id, Educationinfo entity)
         {
             var res= await ctx.Educationinfos.FindAsync(id);
-            if (id != null)
+            if  (id != null)
             {
                 ctx.Entry(res).CurrentValues.SetValues(entity);
                 ctx.SaveChanges();

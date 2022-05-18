@@ -19,7 +19,6 @@ namespace Employee_Onboarding.Models
         public virtual DbSet<Educationinfo> Educationinfos { get; set; }
         public virtual DbSet<Personalinfo> Personalinfos { get; set; }
         public virtual DbSet<Professionalinfo> Professionalinfos { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Userlogin> Userlogins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -36,7 +35,7 @@ namespace Employee_Onboarding.Models
             modelBuilder.Entity<Educationinfo>(entity =>
             {
                 entity.HasKey(e => e.Educationid)
-                    .HasName("PK__Educatio__4BBF3C2D8BB3A52B");
+                    .HasName("PK__Educatio__4BBF3C2D307F3008");
 
                 entity.ToTable("Educationinfo");
 
@@ -84,13 +83,13 @@ namespace Employee_Onboarding.Models
                     .WithMany(p => p.Educationinfos)
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Education__Emplo__6D0D32F4");
+                    .HasConstraintName("FK__Education__Emplo__395884C4");
             });
 
             modelBuilder.Entity<Personalinfo>(entity =>
             {
                 entity.HasKey(e => e.EmployeeId)
-                    .HasName("PK__Personal__7AD04F11527DB5D8");
+                    .HasName("PK__Personal__7AD04F11C30C4C58");
 
                 entity.ToTable("Personalinfo");
 
@@ -154,7 +153,7 @@ namespace Employee_Onboarding.Models
             modelBuilder.Entity<Professionalinfo>(entity =>
             {
                 entity.HasKey(e => e.Professionalid)
-                    .HasName("PK__Professi__B243EB90C8559A2C");
+                    .HasName("PK__Professi__B243EB908F85B3E0");
 
                 entity.ToTable("Professionalinfo");
 
@@ -179,34 +178,7 @@ namespace Employee_Onboarding.Models
                     .WithMany(p => p.Professionalinfos)
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Professio__Emplo__6FE99F9F");
-            });
-
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.ToTable("users");
-
-                entity.Property(e => e.UserId).HasColumnName("userId");
-
-                entity.Property(e => e.EmailId)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("emailId");
-
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("firstName");
-
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("lastName");
-
-                entity.Property(e => e.UserPassword)
-                    .HasMaxLength(250)
-                    .IsUnicode(false)
-                    .HasColumnName("userPassword");
+                    .HasConstraintName("FK__Professio__Emplo__3C34F16F");
             });
 
             modelBuilder.Entity<Userlogin>(entity =>

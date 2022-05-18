@@ -10,10 +10,13 @@ namespace Employee_Onboarding.Controllers
     public class EducationalinfoController : Controller
     {
         private readonly IService<Educationinfo, int> eduserv;
+        private readonly IService<Personalinfo, int> perservice;
 
-        public EducationalinfoController(IService<Educationinfo, int> service)
+
+        public EducationalinfoController(IService<Educationinfo, int> service, IService<Personalinfo, int> perservice)
         {
             eduserv = service;
+            this.perservice = perservice;
         }
         public IActionResult Index()
         {
@@ -32,8 +35,12 @@ namespace Employee_Onboarding.Controllers
         public async Task< IActionResult> Create(Educationinfo info)
         {
             var education = info;
-            HttpContext.Session.SetObject<Educationinfo>("Educationinfo", education);
-            var res =await eduserv.CreateAsync(info);
+            HttpContext.Session.SetObject<Educationinfo>("Educationinfo",education);
+
+            var personalInfo =HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
+            var res = perservice.CreateAsync(personalInfo).Result;
+            info.EmployeeId = res.EmployeeId;
+            var edu =await eduserv.CreateAsync(info);
             return RedirectToAction("Create", "Professionalinfo");
         }
 

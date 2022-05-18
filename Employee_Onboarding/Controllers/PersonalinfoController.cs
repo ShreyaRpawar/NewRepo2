@@ -28,11 +28,11 @@ namespace Employee_Onboarding.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Personalinfo info)
+        public IActionResult Create(Personalinfo info)
         {
             var personal = info;
             HttpContext.Session.SetObject<Personalinfo>("Personalinfo", personal);
-            var res = await perservice.CreateAsync(info);
+            //var res = await perservice.CreateAsync(info);
             return RedirectToAction("Create", "Educationalinfo");
         }
     }

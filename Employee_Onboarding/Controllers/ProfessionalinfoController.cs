@@ -8,22 +8,22 @@ namespace Employee_Onboarding.Controllers
 {
     public class ProfessionalinfoController : Controller
     {
-        private readonly IService<Professionalinfo, int> proserv;
-        private readonly IService<Personalinfo, int> perservice;
-        private readonly IService<Educationinfo, int> eduserv;
+        private readonly IService<Professionalinfo, int> professionalservice;
+        private readonly IService<Personalinfo, int> personalservice;
+        private readonly IService<Educationinfo, int> educationservice;
+       
 
 
-
-        public ProfessionalinfoController(IService<Professionalinfo, int> service, IService<Personalinfo, int> perservice, IService<Educationinfo, int> eduserv)
+        public ProfessionalinfoController(IService<Professionalinfo, int> professionalservice, IService<Personalinfo, int> personalservice, IService<Educationinfo, int> educationservice)
         {
-            proserv = service;
-            this.perservice = perservice;
-            this.eduserv = eduserv;
+            this.professionalservice = professionalservice;
+            this.personalservice = personalservice;
+            this.educationservice = educationservice;
         }
 
         public IActionResult Index()
         {
-            var res = proserv.GetAsync().Result;
+            var res = professionalservice.GetAsync().Result;
             return View();
         }
 
@@ -36,15 +36,10 @@ namespace Employee_Onboarding.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Professionalinfo info)
         {
-            var professional = info;
-
-            var educationInfo = HttpContext.Session.GetObject<Educationinfo>("Educationinfo");
-            var personalInfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
-
-            HttpContext.Session.SetObject<Professionalinfo>("Professionalinfo", professional);
-
-            var res = await proserv.CreateAsync(info);
-            return RedirectToAction("FileUpload", "FileUpload");
+          
+                HttpContext.Session.SetObject<Professionalinfo>("Professionalinfo", info);
+                return RedirectToAction("FileUpload", "FileUpload");
+          
         }
     }
 }

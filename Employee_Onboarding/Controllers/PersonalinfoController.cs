@@ -2,22 +2,24 @@
 using Employee_Onboarding.Services;
 using Employee_Onboarding.SessionExtension;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Employee_Onboarding.Controllers
 {
     public class PersonalinfoController : Controller
     {
-        private readonly IService<Personalinfo, int> perservice;
+        private readonly IService<Personalinfo, int> personalservice;
 
-        public PersonalinfoController(IService<Personalinfo, int> serv)
+        public PersonalinfoController(IService<Personalinfo, int> service)
         {
-            perservice = serv;
+            personalservice = service;
         }
 
         public IActionResult Index()
         {
-            var res = perservice.GetAsync().Result;
+            var res = personalservice.GetAsync().Result;
             return View();
         }
 
@@ -30,10 +32,25 @@ namespace Employee_Onboarding.Controllers
         [HttpPost]
         public IActionResult Create(Personalinfo info)
         {
-            var personal = info;
-            HttpContext.Session.SetObject<Personalinfo>("Personalinfo", personal);
-            //var res = await perservice.CreateAsync(info);
-            return RedirectToAction("Create", "Educationalinfo");
+                var personal = info;
+                HttpContext.Session.SetObject<Personalinfo>("Personalinfo", personal);
+                return RedirectToAction("Create", "Educationalinfo");
         }
+
+        public IActionResult ValidateName(string FullName)
+        {
+
+            Regex reg = new Regex("^([a-zA-Z]+( [a-zA-Z]+)+)$");
+            if (reg.IsMatch(Convert.ToString(FullName)))
+            {
+                return Json(data: true);
+            }
+            else
+            {
+                return Json(data: false);
+            }
+        }
+
+       
     }
 }

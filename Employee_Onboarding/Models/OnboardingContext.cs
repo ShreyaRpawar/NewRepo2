@@ -35,7 +35,7 @@ namespace Employee_Onboarding.Models
             modelBuilder.Entity<Educationinfo>(entity =>
             {
                 entity.HasKey(e => e.Educationid)
-                    .HasName("PK__Educatio__4BBF3C2D307F3008");
+                    .HasName("PK__Educatio__4BBF3C2D782EC6F5");
 
                 entity.ToTable("Educationinfo");
 
@@ -83,13 +83,13 @@ namespace Employee_Onboarding.Models
                     .WithMany(p => p.Educationinfos)
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Education__Emplo__395884C4");
+                    .HasConstraintName("FK__Education__Emplo__40F9A68C");
             });
 
             modelBuilder.Entity<Personalinfo>(entity =>
             {
                 entity.HasKey(e => e.EmployeeId)
-                    .HasName("PK__Personal__7AD04F11C30C4C58");
+                    .HasName("PK__Personal__7AD04F1112995969");
 
                 entity.ToTable("Personalinfo");
 
@@ -153,7 +153,7 @@ namespace Employee_Onboarding.Models
             modelBuilder.Entity<Professionalinfo>(entity =>
             {
                 entity.HasKey(e => e.Professionalid)
-                    .HasName("PK__Professi__B243EB908F85B3E0");
+                    .HasName("PK__Professi__B243EB90BF65D20F");
 
                 entity.ToTable("Professionalinfo");
 
@@ -178,7 +178,7 @@ namespace Employee_Onboarding.Models
                     .WithMany(p => p.Professionalinfos)
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Professio__Emplo__3C34F16F");
+                    .HasConstraintName("FK__Professio__Emplo__43D61337");
             });
 
             modelBuilder.Entity<Userlogin>(entity =>

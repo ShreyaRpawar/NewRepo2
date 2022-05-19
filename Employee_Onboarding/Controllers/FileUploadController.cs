@@ -195,10 +195,10 @@ namespace Employee_Onboarding.Controllers
             var Personalinfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
             Personalinfo.Passportfilepath = Convert.ToString(HttpContext.Session.GetString("imgPath"));
             Personalinfo.Resumefilepath = Convert.ToString(HttpContext.Session.GetString("resumePath"));
-            Personalinfo.Signaturefilepath = Convert.ToString(HttpContext.Session.GetString("SignPath"));
-            Personalinfo.Sscfilepath = Convert.ToString(HttpContext.Session.GetString("SscPath"));
-            Personalinfo.Hscfilepath = Convert.ToString(HttpContext.Session.GetString("HscPath"));
-            Personalinfo.Degreefilepath = Convert.ToString(HttpContext.Session.GetString("DegreePath"));
+            //Personalinfo.Signaturefilepath = Convert.ToString(HttpContext.Session.GetString("SignPath"));
+            //Personalinfo.Sscfilepath = Convert.ToString(HttpContext.Session.GetString("SscPath"));
+            //Personalinfo.Hscfilepath = Convert.ToString(HttpContext.Session.GetString("HscPath"));
+            //Personalinfo.Degreefilepath = Convert.ToString(HttpContext.Session.GetString("DegreePath"));
 
             //var r = Personalinfo;
             var result = perserv.CreateAsync(Personalinfo).Result;
@@ -211,12 +211,12 @@ namespace Employee_Onboarding.Controllers
             var temp = proserv.CreateAsync(professional).Result;
 
 
-            var personalInfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
-
-
+           // var personalInfo = HttpContext.Session.GetObject<Personalinfo>("Personalinfo");
 
             return RedirectToAction("Index", "Home");
         }
+
+
     }
 }
 

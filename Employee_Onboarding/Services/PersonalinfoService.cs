@@ -1,5 +1,6 @@
 ﻿using Employee_Onboarding.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,14 +12,15 @@ namespace Employee_Onboarding.Services
 
         public perserv(OnboardingContext ctx)
         {
-            this.ctx = ctx; 
+            this.ctx = ctx;
         }
 
         async Task<Personalinfo> IService<Personalinfo, int>.CreateAsync(Personalinfo entity)
         {
-           var res = ctx.Personalinfos.Add(entity);
-          await ctx.SaveChangesAsync();
-            return res.Entity;
+                var res = ctx.Personalinfos.Add(entity);
+                await ctx.SaveChangesAsync();
+                return res.Entity;
+
         }
 
         async Task<Personalinfo> IService<Personalinfo, int>.DeleteAsync(int id)

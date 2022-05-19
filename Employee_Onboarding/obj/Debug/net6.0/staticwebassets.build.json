@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EdqttF85/ZvAXKsIbNewDgeBheet2PKO5nViEX+pPig=",
+  "Hash": "l4Auzy5fY9liJRt5BQW6aARfaiTSUYDbr8yQv8g6+dM=",
   "Source": "Employee_Onboarding",
   "BasePath": "_content/Employee_Onboarding",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\mom (1)_page-0001.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\images\\SquarePic_20220514_22505460.jpg",
+      "SourceId": "Employee_Onboarding",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
+      "BasePath": "_content/Employee_Onboarding",
+      "RelativePath": "images/SquarePic_20220514_22505460.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\SquarePic_20220514_22505460.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\images\\SS.png",
+      "SourceId": "Employee_Onboarding",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
+      "BasePath": "_content/Employee_Onboarding",
+      "RelativePath": "images/SS.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\SS.png"
     },
     {
       "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\js\\site.js",
@@ -644,6 +678,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\PDF\\Shreya's Resume.pdf",
+      "SourceId": "Employee_Onboarding",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Coditas\\source\\repos\\Employee_Onboarding\\Employee_Onboarding\\wwwroot\\",
+      "BasePath": "_content/Employee_Onboarding",
+      "RelativePath": "PDF/Shreya's Resume.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PDF\\Shreya's Resume.pdf"
     }
   ]
 }

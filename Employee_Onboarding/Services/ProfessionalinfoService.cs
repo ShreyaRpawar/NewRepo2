@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Employee_Onboarding.Services
 {
-    public class ProfessionalinfoService : IService<Professionalinfo , int>
+    public class ProfessionalinfoService : IService<Professionalinfo, int>
     {
         private readonly OnboardingContext ctx;
 
@@ -31,7 +31,7 @@ namespace Employee_Onboarding.Services
 
         }
 
-    
+
         async Task<Professionalinfo> IService<Professionalinfo, int>.GetAsync(int id)
         {
             var res = await ctx.Professionalinfos.FindAsync(id);
